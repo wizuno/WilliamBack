@@ -7,8 +7,8 @@ package william_back;
 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
-import william_back.bd_william.ClientesBD;
-import william_back.william_interface.InterfaceCliente;
+import BD.ClientesBD;
+import Interface.InterfaceCliente;
 
 /**
  *
