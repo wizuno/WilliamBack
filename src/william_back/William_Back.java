@@ -5,7 +5,8 @@
  */
 package william_back;
 
-import william_back.bd_william.ClientesBD;
+
+import Interface.ImplementarCliente;
 
 /**
  *
@@ -19,7 +20,7 @@ public class William_Back {
     public static void main(String[] args) {
         // TODO code application logic here
         Clientes cliente = new Clientes();
-        ClientesBD cli = new ClientesBD();
+        ImplementarCliente cli = new ImplementarCliente();
         
 
         cliente.setCpfCpnj("45090");
@@ -27,7 +28,7 @@ public class William_Back {
         cliente.setStatus(true);
         cliente.setValor(400.0);
         
-        cli.Cadastrar(cliente);
+        cli.CadastrarCLiente(cliente);
         
         
 

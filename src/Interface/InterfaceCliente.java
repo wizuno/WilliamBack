@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package william_back.william_interface;
+package Interface;
+
+import william_back.Clientes;
 
 /**
  *
@@ -11,7 +13,8 @@ package william_back.william_interface;
  */
 public interface InterfaceCliente {
     
-    void CadastrarCLiente(String nome,String cpfCpnj,boolean status,double valor);
+    void CadastrarCLiente(Clientes cliente);
     void CalcularMedia();
+    void PessoasEnvolvidas();
     
 }
