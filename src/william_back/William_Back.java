@@ -19,9 +19,17 @@ public class William_Back {
     public static void main(String[] args) {
         // TODO code application logic here
         Clientes cliente = new Clientes();
+        ClientesBD cli = new ClientesBD();
+        
 
-        cliente.CalcularMedia();
-        cliente.ExibirPessoas();
+        cliente.setCpfCpnj("45090");
+        cliente.setNome("ABB");
+        cliente.setStatus(true);
+        cliente.setValor(400.0);
+        
+        cli.Cadastrar(cliente);
+        
+        
 
         
     }

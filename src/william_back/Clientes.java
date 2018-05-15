@@ -14,7 +14,7 @@ import william_back.william_interface.InterfaceCliente;
  *
  * @author William
  */
-public class Clientes implements InterfaceCliente {
+public class Clientes {
 
  
     
@@ -22,7 +22,7 @@ public class Clientes implements InterfaceCliente {
      private boolean status;
      private String cpfCpnj;
      private double valor;
-     private String resposta;
+
     
     ClientesBD cliente = new ClientesBD();
     
@@ -62,41 +62,5 @@ public class Clientes implements InterfaceCliente {
     public void setValor(double valor) {
         this.valor = valor;
     }
-      
-    
-    @Override
-    public void CadastrarCLiente(String nome,String cpfCnpj,boolean status,double valor) {
-        
-        resposta = cliente.Cadastrar(nome, cpfCnpj, status, valor);
-        JOptionPane.showMessageDialog(null,resposta);
-        
-    }
-
-    @Override
-    public void CalcularMedia() {
-             
-       resposta =  cliente.CalcularMedia();
-       System.out.println(resposta);
-        
-    }
-    
-    public void ExibirPessoas(){
-        
-        ArrayList respostaArray = new ArrayList();
-        
-        respostaArray = cliente.PessoasEnvolvidas();
-        int tamanho = respostaArray.size();
-        
-        if(tamanho != 0){
-          for(int i=0; i < tamanho; i=i+2){
-            System.out.println(respostaArray.get(i)+ " " + respostaArray.get(i+1));
-            
-          }  
-        }else{
-            System.out.println("Sem resultados!!");
-        }
-        
-        
-    }
-    
+          
 }

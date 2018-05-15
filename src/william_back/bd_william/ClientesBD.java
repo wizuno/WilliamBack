@@ -11,6 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import william_back.Clientes;
 
 /**
  *
@@ -52,11 +53,11 @@ public class ClientesBD {
         
     }
     
-    public String Cadastrar(String nome, String cpfCnpj,boolean status, double valor ){
+    public String Cadastrar(Clientes cliente){
         
         String comando;
         comando = "INSERT INTO tb_customer_account (cpf_cnpj,nm_customer,is_active,vl_total) "
-                + "VALUES ('"+cpfCnpj+ "','"+ nome+ "',"+ status+ ","+ valor+ ");";
+                + "VALUES ('"+cliente.getCpfCpnj()+ "','"+ cliente.getNome().toUpperCase()+ "',"+ cliente.isStatus()+ ","+ cliente.getValor()+ ");";
         
          try {
 
@@ -182,11 +183,11 @@ public class ClientesBD {
             
     
     /*
-    public void Editar(int id, String indicador){
+    public void Editar(Clientes cliente){
         
         String comando;
-        comando = "UPDATE tb_customer_account SET is_active = '"+ indicador 
-                + "' WHERE id_customer = '" + id +"';";
+        comando = "UPDATE tb_customer_account SET is_active = '"+ cliente.isStatus()
+                + "' WHERE nm_costumer = '" + cliente.getNome().toUpperCase() +"';";
         
          try {
 
