@@ -21,18 +21,8 @@ public class William_Back {
         // TODO code application logic here
         Clientes cliente = new Clientes();
         ImplementarCliente cli = new ImplementarCliente();
-        
-
-        cliente.setCpfCpnj("45090");
-        cliente.setNome("ABB");
-        cliente.setStatus(true);
-        cliente.setValor(400.0);
-        
-        cli.CadastrarCLiente(cliente);
-        
-        
-
-        
+   
+        cli.PessoasEnvolvidas();
     }
     
 }

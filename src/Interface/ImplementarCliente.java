@@ -35,6 +35,16 @@ public class ImplementarCliente implements InterfaceCliente {
     public void PessoasEnvolvidas() {
         
          respostaArray = clienteBd.PessoasEnvolvidas();
+         int tamanho = respostaArray.size();
+         if(tamanho != 0){
+             for(int i=0; i < tamanho; i=i+2){
+                 System.out.println(respostaArray.get(i) + " " + respostaArray.get(i+1));
+             }
+           
+         }
+         else{
+             System.out.println("Nenhuma pessoa encontrada!");
+         }
     }
     
 }
