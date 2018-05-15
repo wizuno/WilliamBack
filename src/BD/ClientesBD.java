@@ -96,7 +96,7 @@ public class ClientesBD {
         String comando;
         resposta = "Não foram encontrada pessoas para as condições buscadas!";
         
-        comando = "SELECT vl_total as total FROM tb_customer_account WHERE vl_total > 560.0 AND id_customer BETWEEN 1500 AND 2700;";
+        comando = "SELECT vl_total as total FROM tb_customer_account WHERE vl_total > 560 AND id_customer BETWEEN 1500 AND 2700;";
         
          try {
 
@@ -144,7 +144,7 @@ public class ClientesBD {
         ArrayList respostaArray = new ArrayList();
         String comando;
         
-        comando = "SELECT nm_customer,vl_total FROM tb_customer_account "
+        comando = "SELECT nm_customer,vl_total FROM tb_customer_account WHERE vl_total > 560 AND id_customer BETWEEN 1500 AND 2700 "
                 + "ORDER BY vl_total DESC;";
         
          try {

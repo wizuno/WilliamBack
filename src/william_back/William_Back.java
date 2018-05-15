@@ -19,10 +19,10 @@ public class William_Back {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Clientes cliente = new Clientes();
         ImplementarCliente cli = new ImplementarCliente();
    
         cli.PessoasEnvolvidas();
+        cli.CalcularMedia();
     }
     
 }

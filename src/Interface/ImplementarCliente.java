@@ -29,6 +29,7 @@ public class ImplementarCliente implements InterfaceCliente {
     public void CalcularMedia() {
         
         resposta = clienteBd.CalcularMedia();
+        System.out.println(resposta);
     }
 
     @Override
